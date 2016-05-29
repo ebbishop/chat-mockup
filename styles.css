@@ -1,0 +1,179 @@
+html, body {
+  height: 99%;
+  margin-bottom: -8px;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+
+/* all avatars */
+img {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+}
+
+/* semi-flexible columns */
+.col-1 {
+  float: left;
+  width: 33%;
+}
+.col-2 {
+  float: left;
+  width: 67%;
+}
+
+/* scrollable containers */
+.container {
+  max-height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+/* list of all conversations and preview text */
+.convo-preview {
+  border-bottom: 1px solid lightgrey;
+  padding: 15px;
+  cursor: pointer;
+}
+.convo-preview:after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.convo-img {
+  float: left;
+  width: 65px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+/* conversation details */
+/* fixed header & footer */
+.convo-detail {
+  box-sizing: border-box;
+  margin: 72px 0 100px 0;
+  height: calc(100% - 172px);
+}
+.convo-detail .header, .convo-detail #footer {
+  position: fixed;
+  left: 33%;
+  width: 67%;
+  box-sizing: border-box;
+}
+/* header */
+.convo-detail .header {
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  height: 80px;
+  top: 0;
+  padding: 0 10px;
+}
+
+.convo-detail .header > p{
+  font-size: 2em;
+  font-weight: bold;
+}
+/* message input */
+.convo-detail #footer {
+  border-top: 2px solid grey;
+  padding: 20px;
+  min-height: 100px;
+  background-color: white;
+  bottom: 0;
+}
+
+.common {
+  float: left;
+  font-family: inherit;
+  width: calc(100% - 256px);
+  margin-right: 20px;
+  font-size: inherit;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  white-space: pre-wrap;
+}
+
+.convo-detail #footer textarea{
+  height: 60px;
+  overflow: hidden;
+}
+#hidden {
+  visibility: hidden;
+  min-height: 60px;
+  border: 1px solid grey;
+}
+
+.btn-send {
+  background-color: green;
+  color: white;
+  height: 60px;
+  width: 200px;
+  border: 1px solid darkgrey;
+  border-radius: 4px;
+  font-size: inherit;
+  float: right;
+}
+
+/* texts */
+.text-wrapper {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.text-detail {
+  margin-right: 20px;
+}
+.text-detail:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+.convo-content {
+  width: calc(100% - 65px);
+  padding: 20px 0;
+  float: left;
+}
+.convo-content > p {
+  margin: 8px;
+}
+
+.convo-content .time{
+  font-style: italic;
+  text-align: right;
+}
+.convo-content .content{
+  background-color: lightgrey;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* style changes for .me */
+.text-detail.me {
+  margin-right: 0;
+  margin-left: 20px;
+}
+.text-detail.me .convo-img {
+  text-align: left;
+}
+.me .convo-content > .content {
+  background-color: lightblue;
+}
+.me .name {
+  text-align: right;
+}
+.me .convo-content > .time {
+  text-align: left;
+}
+.me .convo-img {
+  float: right;
+}
+
